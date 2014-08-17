@@ -1,0 +1,9 @@
+S vendor/
+S utils/
+S react/
+
+B _build/vendor/
+B _build/utils/
+B _build/react/
+
+PKG js_of_ocaml js_of_ocaml.ocamlbuild js_of_ocaml.syntax lwt

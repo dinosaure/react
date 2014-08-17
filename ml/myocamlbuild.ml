@@ -606,5 +606,5 @@ Ocamlbuild_plugin.dispatch
   (fun hook ->
     dispatch_default hook;
     Ocamlbuild_js_of_ocaml.dispatcher
-      ~oasis_executables:["src/utils.byte"]
+      ~oasis_executables:["src/react.byte"]
       hook);;
