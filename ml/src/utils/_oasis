@@ -1,0 +1,20 @@
+OASISFormat                                 : 0.4
+Name                                        : React.ml
+Version                                     : 0.1
+Synopsis                                    : React in OCaml
+Authors                                     : Romain Calascibetta, Eyyub Sari
+License                                     : MIT
+Plugins                                     : DevFiles (0.4)
+OCamlVersion                                : >= 4.01
+BuildTools                                  : ocamlbuild
+AlphaFeatures                               : ocamlbuild_more_args
+XOCamlbuildPluginTags                       : package(js_of_ocaml.ocamlbuild)
+PostBuildCommand                            : cp _build/src/utils.js ./utils.js
+
+Executable utils
+  Path                                      : src
+  MainIs                                    : utils.ml
+  CompiledObject                            : byte
+  BuildDepends                              : js_of_ocaml,
+                                              js_of_ocaml.syntax,
+                                              lwt

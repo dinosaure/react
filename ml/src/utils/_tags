@@ -1,0 +1,25 @@
+# OASIS_START
+# DO NOT EDIT (digest: 697cded0407d37334de248d34ccb8d9b)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Executable utils
+"src/utils.byte": package(js_of_ocaml)
+"src/utils.byte": package(js_of_ocaml.syntax)
+"src/utils.byte": package(lwt)
+<src/*.ml{,i}>: package(js_of_ocaml)
+<src/*.ml{,i}>: package(js_of_ocaml.syntax)
+<src/*.ml{,i}>: package(lwt)
+# OASIS_STOP
+
+<src/*.ml>: syntax(camlp4o)
